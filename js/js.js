@@ -16,8 +16,8 @@ function handleProductList(data) {
 }
 
 function showProp(prop) {
-  console.log(prop);
-  const template = document.querySelector("#maintemplate").content;
+  /*   console.log(prop);
+   */ const template = document.querySelector("#maintemplate").content;
 
   const copy = template.cloneNode(true);
 
