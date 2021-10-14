@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* border: 1px dotted; */
+}
+body {
+  background-color: #f5f5f5;
+}
+.topelements {
+  display: flex;
+  align-items: center;
+  height: auto;
+  justify-content: space-between;
+  padding: 1rem 5vw 0 5vw;
+}
+main {
+  margin: 0 5vw 0 5vw;
+}
+.properties {
+  font-size: 2rem;
+}
+
+.popular {
+  color: #26a3c3;
+}
+
+.addnew {
+  border: 2px solid #26a3c3;
+  border-radius: 5px;
+  padding: 1rem;
+  color: #26a3c3;
+}
+.propertytemplates img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+  column-gap: 3rem;
+  row-gap: 3rem;
+  margin-top: 5vw;
+}
+
+.locationinfo {
+  padding: 2rem;
+  background-color: white;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.7;
+  border-left: 2px solid rgba(191, 191, 191, 1);
+  border-right: 2px solid rgba(191, 191, 191, 1);
+}
+
+.specs {
+  padding: 2rem;
+  background-color: white;
+  font-size: 1.1rem;
+  border-top: 0.1px solid rgba(191, 191, 191, 0.5);
+  border-left: 2px solid rgba(191, 191, 191, 1);
+  border-right: 2px solid rgba(191, 191, 191, 1);
+  /* border-bottom: 2px solid rgba(191, 191, 191, 1); */
+  display: flex;
+  justify-content: center;
+}
+.bathrooms {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-left: 0.1px solid rgba(191, 191, 191, 0.5);
+}
+.sqfeet {
+  padding-left: 0.9rem;
+
+  display: flex;
+  flex-direction: column;
+  border-left: 0.1px solid rgba(191, 191, 191, 0.5);
+}
+
+.bedrooms {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0.9rem;
+}
+
+.numbbed {
+  align-self: center;
+}
+.numbbath {
+  align-self: center;
+}
+
+.numbsqfeet {
+  align-self: center;
+}
+
+.clicktoview {
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 0 0.8rem 0;
+  background-color: #26a3c3;
+  color: white;
+  border-radius: 0 0 5px 5px;
+}
