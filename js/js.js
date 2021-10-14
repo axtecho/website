@@ -1,5 +1,5 @@
 const url =
-  "http://nomames.dk/kea/wp/childtheme/wp-json/wp/v2/property?per_page=10";
+  "http://nomames.dk/kea/wp/childtheme/wp-json/wp/v2/property?per_page=10&_embed";
 
 fetch(url)
   .then(function (res) {
@@ -11,35 +11,27 @@ fetch(url)
   });
 
 function handleProductList(data) {
-  console.log(data);
-  data.forEach(showProp);
+  /*   console.log(data);
+   */ data.forEach(showProp);
 }
 
-function showProp() {}
-{
-  /* <div class="propertytemplates">
-<img src="/assets/Property1.jpg" alt="building" />
-<div class="locationinfo">
-  <div class="line1">
-    <span class="adresse">1058 W Catalpa</span>
-    <span class="number">#3E</span>
-  </div>
-  <div class="line2">
-    <span class="City">Chicago</span>
-    <span class="state">IL</span>
-    <span class="postal">60640</span>
-  </div>
-</div>
-<div class="specs">
-  <span class="bedrooms"> <span class="numbbed">1</span> BED</span>
-  <span class="bathrooms"
-    ><span class="numbbath">1</span> BATH</span
-  >
-  <span class="sqfeet"
-    ><span class="numbsqfeet">800</span> SQ FEET</span
-  >
-</div>
-<div class="clicktoview">View property</div>
-</div>
-</template> */
+function showProp(prop) {
+  console.log(prop);
+  const template = document.querySelector("#maintemplate").content;
+
+  const copy = template.cloneNode(true);
+
+  copy.querySelector(".propimg").src =
+    prop._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
+  copy.querySelector(".adresse").textContent = prop.street_name;
+  copy.querySelector(".number").textContent = prop.number;
+  copy.querySelector(".City").textContent = prop.city;
+  copy.querySelector(".state").textContent = prop.state;
+  copy.querySelector(".postal").textContent = prop.postal_code;
+  copy.querySelector(".numbbed").textContent = prop.bedrooms;
+  copy.querySelector(".numbbath").textContent = prop.bathrooms;
+  copy.querySelector(".numbsqfeet").textContent = prop.square_feet;
+
+  const parent = document.querySelector(".main");
+  parent.appendChild(copy);
 }
