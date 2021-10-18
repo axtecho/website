@@ -36,12 +36,16 @@ main {
   width: 100%;
   border-radius: 5px 5px 0 0;
 }
+.propimg {
+  height: 100%;
+}
 .main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
   column-gap: 3rem;
   row-gap: 3rem;
   margin-top: 5vw;
+  margin-bottom: 10vw;
 }
 
 .locationinfo {
@@ -118,7 +122,10 @@ main {
 .line2 {
   white-space: nowrap;
 }
-
+.imgdiv {
+  width: 100%;
+  height: 300px;
+}
 @media (max-width: 900px) {
   .main {
     display: grid;
