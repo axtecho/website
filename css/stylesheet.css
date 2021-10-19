@@ -33,8 +33,11 @@ main {
   color: #26a3c3;
 }
 .propertytemplates img {
-  width: 100%;
+  /*   width: 100%;
+ */
   border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: center;
 }
 .propimg {
   height: 100%;
@@ -124,7 +127,11 @@ main {
 }
 .imgdiv {
   width: 100%;
-  height: 300px;
+  height: 20vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px 5px 0 0;
 }
 @media (max-width: 900px) {
   .main {
@@ -144,6 +151,13 @@ main {
   }
   .properties {
     font-size: 1.5rem;
+  }
+  .imgdiv {
+    width: 100%;
+    height: 27.5vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
   }
 }
 
